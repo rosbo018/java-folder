@@ -1,0 +1,16 @@
+import javax.swing.JPanel; 
+import java.awt.Color;
+import java.awt.Dimension;
+
+class DisplayArea extends JPanel{
+	final int DISPLAY_SIZE = 500;
+
+	public DisplayArea (){
+		setBackground(Color.WHITE);
+	}
+	public Dimension getPreferedSize(){
+		Dimension d = new Dimension(DISPLAY_SIZE,DISPLAY_SIZE);
+		return d;
+	}
+	
+}

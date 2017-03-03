@@ -83,7 +83,26 @@ class truth{
 	}
 	public static boolean[][] applyOp(List<String> initStack, boolean[][] truthtable, int numVars){
 		boolean[][] newarr = new boolean[truthtable.length+1][truthtable[0].length];
+		for (int i =0; i < truthtable.length; i++){
+			for (int j =0; j < truthtable[i].length; j++){
+				newarr[i][j] = truthtable[i][j];//creates a new 2d array with additional column
+			}
+		}
+		List<boolean> eqStack = new ArrayList<boolean>();
+		for (int x =0; x < truthtable[].length; x++){
+		
+			for (int i =0; i < initStack.length; i++){
+				if (!initStack[i].matches("[!&||]")){
+					eqStack.add(truthtable[varToInt(initStack[i])]);
+				}
+			}
+			for (int )
+		}
+	}
 
+	public static int varToInt(String ch){
+		char ch1 = (char)ch;
+		return ((ch1 - 'a' +1));
 	}
 	public static int determineNumVars(String[] varAndOp){
 		// determines number of variables that were inputed
